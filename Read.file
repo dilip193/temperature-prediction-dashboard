@@ -1,0 +1,131 @@
+🌡️ Temperature Prediction Using Solar Irradiance
+📌 Project Overview
+
+This project predicts ambient temperature using solar irradiance and temporal features with machine learning.
+A Random Forest Regression model is used to achieve high prediction accuracy, and results are presented through an interactive HTML dashboard.
+
+📊 Dataset Description
+
+Source: Solar irradiance and temperature observations
+
+Location: Khulna region
+
+Time Period: January 2014 – November 2022
+
+Records: 78,138 (hourly data)
+
+Features:
+
+Year
+
+Month
+
+Day
+
+Hour
+
+Irradiance (W/m²)
+
+Target Variable:
+
+Temperature (°C)
+
+Data Quality:
+
+No missing values
+
+Clean and well-structured
+
+🤖 Machine Learning Models Used
+1️⃣ Linear Regression (Baseline)
+
+Used as a simple baseline model
+
+MAE: ~3.95 °C
+
+Accuracy (R²): ~68%
+
+2️⃣ Random Forest Regression (Final Model)
+
+Captures non-linear relationships
+
+MAE: 0.62 °C
+
+Accuracy (R²): 97.86%
+
+Best performing model
+
+📈 Feature Importance (Random Forest)
+Feature	Importance
+Month	High
+Irradiance	High
+Hour	Medium
+Day	Low
+Year	Low
+
+Seasonal variation and solar irradiance are the strongest factors affecting temperature.
+
+📊 Dashboard Features
+
+The project includes a single-page interactive HTML dashboard that shows:
+
+Monthly average temperature (bar chart)
+
+Model accuracy visualization
+
+Last 30 days temperature trend
+
+Tomorrow’s hourly temperature prediction
+
+Model performance metrics (MAE & R²)
+
+📄 Output file:
+
+temperature_dashboard_all_in_one.html
+
+▶️ How to Run the Project
+Step 1: Open project folder
+cd C:\Users\kiran\OneDrive\Desktop\Python
+
+Step 2: Generate dashboard
+python dashboard.py
+
+Step 3: Open dashboard
+start temperature_dashboard_all_in_one.html
+
+📂 Project Structure
+dashboard.py
+random_forest.py
+Linear Regression.py
+predict_tomorrow.py
+solar_data_khulna_from_jan_2014_to_nov_2022.csv.zip
+temperature_dashboard_all_in_one.html
+README.md
+
+🔮 Tomorrow Temperature Prediction
+
+The model predicts temperature for future dates using estimated irradiance and time inputs.
+Example:
+
+Predicted temperature for tomorrow at 12:00 = 22.98 °C
+
+🎓 Conclusion
+
+The Random Forest model achieved high accuracy (97.86%) with a low prediction error (0.62 °C), demonstrating that solar irradiance combined with temporal features is highly effective for temperature prediction.
+The interactive dashboard provides clear visualization and practical forecasting capability.
+
+🚀 Future Scope
+
+Integrate real-time weather APIs
+
+Add humidity and wind speed features
+
+Deploy dashboard as a web application
+
+Extend to multi-day forecasting
+
+👨‍🎓 Author
+
+Illipilli Dilip Kumar
+Electronics & Communication Engineering
+Machine Learning Project
